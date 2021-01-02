@@ -1,0 +1,31 @@
+name: 'Telegram sticker'
+description: 'Upload Telegram sticker to stickerpack'
+inputs:
+  stickerSet:
+    description: Name of sticker set
+    required: true
+  stickerFile:
+    description: Path to sticker (SVG file)
+    required: true
+  emoji:
+    description: Emoji of sticker
+    required: true
+  ownerId:
+    description: Identifier of user behalf of it sticker set will updated
+    required: true
+  token:
+    description: Telegram token from Bot
+    required: true
+  title:
+    description: Sticker set's title
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.stickerSet }}
+    - ${{ inputs.stickerFile }}
+    - ${{ inputs.emoji }}
+    - ${{ inputs.ownerId }}
+    - ${{ inputs.token }}
+    - ${{ inputs.title }}
