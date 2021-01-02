@@ -30,7 +30,7 @@ Title of sticker set
 ## Example usage
 
 ```yaml
-uses: underoot/telegram-sticker-action@master
+uses: underoot/telegram-sticker-action@v1
   with:
     stickerSet: 'ChannelStatisticsByAwesomeBot'
     stickerFile: 'dist/sticker.svg'
